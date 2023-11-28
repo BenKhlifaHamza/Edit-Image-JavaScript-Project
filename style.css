@@ -1,0 +1,129 @@
+*{
+    padding: 0 0;
+    margin: 0 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #333;
+    height: 100vh;
+}
+
+.container{
+    margin-top: 20px;
+    background-color: #222;
+    width:  80vw ;
+    min-height: fit-content;
+    margin: auto; /* Bech N5aliyo l conainer f center */
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#photo{
+    max-width: 45vw;
+    max-height: 60vh;
+}
+
+.uploadBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputUpload{
+    display: none;
+}
+
+.labelUpload{
+    color: #fff;
+    border: 2px dashed #fff;
+    padding: 10px 30px;
+    border-radius: 15px;
+    cursor:  pointer;
+}
+
+.filtres ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;/* Par defaut deja tabda (flex-start) */
+    list-style: none;
+}
+
+.filtres ul li{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.filtres ul li label{
+    color: #fff;
+}
+
+.btns{
+    gap: 20px;
+}
+
+.filtres ul li:last-child{
+flex-direction: row;
+justify-content: space-around;
+}
+
+.btns a,span{
+background-color: #fff;
+color: #222;
+padding: 10px 15px;
+width: 80px;
+border-radius: 10px;
+font-size: 18px;
+font-family: 800;
+text-align: center;
+border: 2px solid #fff;
+transition: 0.3s;
+}
+
+
+.btns a:hover,span:hover{
+    background-color: #222;
+    color: #fff;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+/*===============Media Mobile===============*/
+@media screen and (max-width: 768px) {
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filtres ul li{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+
+    #photo{
+        max-width: 80vw;
+    }
+
+    .content{
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    
+    
+
+
+}
